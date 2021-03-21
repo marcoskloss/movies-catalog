@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: rgb(222, 225, 235);
+  --dark-gray: #1a1a1a;
+  --gray: #1d1d1d;
+  --light-gray: #2c2c2c;
+}
+
+@media(max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+    /*1rem = 16px*/
+  }
+}
+
+@media(max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background: var(--dark-gray);
+  color: var(--white);
+}
+
+body, input, textarea, button {
+  font: 400 16px 'Inter', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,33 @@
+.container {
+  min-width: 20rem;
+  height: 100%;
+  background: var(--light-gray);
+  border-radius: 6px;
+
+  position: relative;
+
+  margin-right: 1.4rem;
+}
+
+.container > img {
+  height: 100%;
+  width: 100%;
+  
+  filter: brightness(50%);
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+
+  padding: 1rem ;
+}
+
+.content h1 {
+  display: inline;
+}
+
+.content p {
+  font-size: .94rem;
+}

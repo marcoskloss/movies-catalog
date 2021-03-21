@@ -1,0 +1,61 @@
+.sidebar {
+  background: var(--gray);
+  width: 25%;
+  height: 100vh;
+  max-width: 350px;
+
+  padding-top: 3rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+  
+  position: relative;
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+.sidebar:hover.sidebar h1::before {
+  width: 100%;
+}
+
+.sidebar h1 {
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.sidebar h1::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--white);
+  bottom: -3px;
+  transition: width .7s ease;
+}
+
+.container {
+  width: 80%;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.scroll {
+  height: 100%;
+  width: calc(100% + 17px);
+  overflow-y: scroll;
+}
+
+@keyframes slide{
+  from {
+    left: -350px;
+  }
+
+  to {
+    left: 0;
+  }
+}
