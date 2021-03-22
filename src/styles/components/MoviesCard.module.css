@@ -26,8 +26,9 @@
 
 .content h1 {
   display: inline;
+  font-size: 1.4rem;
 }
 
 .content p {
-  font-size: .94rem;
+  font-size: .92rem;
 }
