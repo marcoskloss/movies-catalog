@@ -2,18 +2,14 @@ import styles from '../styles/components/MoviesCard.module.css'
 
 import Rating from './Rating'
 
-export default function MoviesCard() {
+export default function MoviesCard({title, description, rating}) {
   return (
     <div className={styles.container}>
       <img src="assets/bg-test.jpg" alt="Filme tal"/>
       <div className={styles.content}>
-        <h1>Título</h1>
-        <Rating />
-        <p>
-          Lorem impsum textis sin sentidis escrivis rapium eres istos 
-          tuti bene parmegiano regiano textis sin sentidis escrivis rapium eres istos 
-          tuti bene parmegiano regiano.
-        </p>
+        <h1>{title}</h1>
+        <Rating rating={rating}/>
+        <p>{description}</p>
       </div>
     </div>
   )
