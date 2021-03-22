@@ -1,5 +1,5 @@
 import Sidebar from './components/Sidebar'
-import MainSection from './components/MainSection'
+import MoviesSection from './components/MoviesSection'
 
 import { MoviesProvider } from './contexts/MoviesContext'
 
@@ -10,7 +10,7 @@ function App() {
     <div className="App" style={{display: 'flex'}}>
       <MoviesProvider>
         <Sidebar />
-        <MainSection />
+        <MoviesSection />
       </MoviesProvider>
     </div>
   );

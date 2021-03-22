@@ -1,12 +1,12 @@
 import { useContext } from 'react'
 
-import styles from '../styles/components/MainSection.module.css'
+import styles from '../styles/components/MoviesSection.module.css'
 
 import MoviesCard from './MoviesCard'
 
 import { MoviesContext } from '../contexts/MoviesContext'
 
-export default function MainSection() {
+export default function MoviesSection() {
   const { activeGenre, moviesList } = useContext(MoviesContext)
 
   return (
