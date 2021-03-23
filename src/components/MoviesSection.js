@@ -3,11 +3,16 @@ import { useContext } from 'react'
 import styles from '../styles/components/MoviesSection.module.css'
 
 import MoviesCard from './MoviesCard'
+import MoviesSectionLoading from './MoviesSectionLoading'
 
 import { MoviesContext } from '../contexts/MoviesContext'
 
 export default function MoviesSection() {
-  const { activeGenre, moviesList } = useContext(MoviesContext)
+  const { activeGenre, moviesList, hasGenreSelected } = useContext(MoviesContext)
+
+  if (!hasGenreSelected) {
+    return <MoviesSectionLoading />
+  }
 
   return (
     <section className={styles.container}>
@@ -18,8 +23,11 @@ export default function MoviesSection() {
             <MoviesCard 
               title={movie.title} 
               description={movie.overview} 
-              rating={movie.vote_average}
+              votes={movie.vote_average}
+              imagePath={movie.poster_path}
               key={movie.id}
+              release_date={movie.release_date}
+              language={movie.original_language}
            />
           )
         })}

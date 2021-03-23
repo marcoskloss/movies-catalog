@@ -1,19 +1,36 @@
 .container {
-  min-width: 20rem;
+  min-width: 19rem;
   height: 100%;
   background: var(--light-gray);
   border-radius: 6px;
+  border: 0;
 
   position: relative;
 
   margin-right: 1.4rem;
+
+  cursor: pointer;
+  transition: box-shadow .3s;
+}
+
+.container:hover {
+  box-shadow: 0 0 7px 3px var(--black);
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  border-radius: 6px;
+  background: linear-gradient(180deg, transparent 10%, rgba(0,0,0,0.8) 70%);
 }
 
 .container > img {
   height: 100%;
   width: 100%;
-  
-  filter: brightness(50%);
+
+  border-radius: 6px;
 }
 
 .content {
@@ -21,11 +38,12 @@
   bottom: 0;
   text-align: left;
 
+  z-index: 5;
+
   padding: 1rem ;
 }
 
 .content h1 {
-  display: inline;
   font-size: 1.4rem;
 }
 

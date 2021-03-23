@@ -1,0 +1,29 @@
+.container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h1 {
+  font-size: 2.8rem;
+}
+
+.container img {
+  position: relative;
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide{
+  0%, 100% {
+    left: -250px;
+  }
+
+  50% {
+    left: 0;
+  }
+}

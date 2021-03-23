@@ -1,9 +1,8 @@
 .rating {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   display: flex;
   gap: 5px;
+
+  margin: .3rem 0;
 }
 
 .rating img {
