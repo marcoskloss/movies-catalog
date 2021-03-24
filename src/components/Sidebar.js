@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 import Card from './Card'
 import { getGenreList } from '../services/genreList'
-
+import HamburguerMenu from './HamburguerMenu'
 
 export default function Sidebar() {
   const [genreList, setGenreList] = useState([])
@@ -19,15 +19,19 @@ export default function Sidebar() {
   }, [])
 
   return (
-    <aside className={styles.sidebar}>
-      <h1>Genres</h1>
-      <div className={styles.container}>
-        <div className={styles.scroll}>
-          {genreList.map(genre => {
-            return <Card title={genre.name} id={genre.id} key={genre.id}/>
-          })}
+    <>
+      <HamburguerMenu genreList={genreList}/>
+      
+      <aside className={styles.sidebar}>
+        <h1>Genres</h1>
+        <div className={styles.container}>
+          <div className={styles.scroll}>
+            {genreList.map(genre => {
+              return <Card title={genre.name} id={genre.id} key={genre.id}/>
+            })}
+          </div>
         </div>
-      </div>
-    </aside>
+      </aside>
+    </>
   )
 }

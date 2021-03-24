@@ -50,6 +50,7 @@
   overflow-y: scroll;
 }
 
+
 @keyframes slide{
   from {
     left: -350px;
@@ -57,5 +58,11 @@
 
   to {
     left: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .sidebar {
+    display: none;
   }
 }

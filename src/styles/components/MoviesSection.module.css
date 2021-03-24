@@ -1,7 +1,7 @@
 .container {
   height: 100vh;
   width: 75%;
-
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,3 +44,28 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 960px) {
+  .container {
+    width: 100%;
+    height: unset;
+    margin: 0 auto;
+    border: 1px solid gold;
+  }
+
+  .moviesList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    height: unset;
+    overflow-x: unset;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .moviesList {
+    grid-template-columns: 1fr;
+  }
+}
+

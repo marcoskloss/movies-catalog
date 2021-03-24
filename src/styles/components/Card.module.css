@@ -1,8 +1,9 @@
 .container {
-  width: 100%;
+  width: 95%;
+  max-width: 350px;
   height: 4rem;
 
-  margin-bottom: 2.8rem;
+  margin: 0 auto 2.8rem auto;
 
   border-radius: 6px;
   background: var(--light-gray);
