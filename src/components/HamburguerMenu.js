@@ -6,8 +6,6 @@ import Card from './Card'
 
 export default function HamburguerMenu({genreList}) {
   const [isHidden, setIsHidden] = useState(true)
-
-  console.log(genreList.length);
   return (
     <>
       <div className={styles.container} onClick={() => setIsHidden(prevState => !prevState)}>
@@ -19,11 +17,11 @@ export default function HamburguerMenu({genreList}) {
       <div className={`${styles.content} ${isHidden ? styles.hidden : ''}`}>
         {genreList.map(genre => {
           return (
-            <div onClick={() => setIsHidden(true)}>
+            <div onClick={() => setIsHidden(true)} key={genre.id}>
               <Card 
-              title={genre.name} 
-              id={genre.id} 
-              key={genre.id} />
+                title={genre.name} 
+                id={genre.id} 
+              />
             </div>
           )
         })}
